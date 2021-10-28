@@ -32,7 +32,13 @@ function playRound(computerSelection, playerSelection) {
     }
 } 
 
+//play the game for 5 rounds
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playerSelection = getPlayerInput();
+        computerSelection = computerPlay();
+        playRound(computerSelection, playerSelection);
+    }
+}
 
-playerSelection = getPlayerInput();
-computerSelection = computerPlay();
-playRound(computerSelection, playerSelection);
+game();
